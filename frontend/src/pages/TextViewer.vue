@@ -19,7 +19,7 @@ onMounted(() => {
 
   intervalId = setInterval(() => {
     fetchText();
-  }, 5000);
+  }, 3000);
 });
 
 onUnmounted(() => {
