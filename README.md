@@ -1,4 +1,4 @@
-# FastAPI-Vite-Demo-Project# FastAPI + Vue.js Demo
+# FastAPI + Vue.js Demo
 
 A demonstration of connecting FastAPI with Vue.js.
 
