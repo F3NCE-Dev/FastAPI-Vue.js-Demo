@@ -57,7 +57,7 @@ DEBUG_MODE=true
 
 ### Option 1: Run with Docker (Recommended)
 
-- **Make sure Docker is installed and run**
+- **Make sure Docker is installed and running**
 
 ```bash
 docker-compose up --build
@@ -72,7 +72,7 @@ docker-compose up --build
 
 #### Run the backend
 
-- **Open new terminal and running**
+- **Open new terminal and run**
 
 ```bash
 cd backend
