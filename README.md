@@ -38,9 +38,10 @@ venv/Scripts/activate # Windows
 pip install -r requirements.txt
 ```
 
-## Step 3: Create a .env file (optional)
+## Step 3: Create a backend .env file (optional)
 
 ```bash
+cd backend
 echo "" > .env
 ```
 
@@ -51,6 +52,19 @@ Example:
 ```env
 FRONTEND_ORIGINS=["your", "origins"]
 DEBUG_MODE=true
+```
+
+## Step 4: Create a frontend .env file (optional, required for Docker)
+
+```bash
+cd frontend
+echo "" > .env
+```
+
+Fill it with the API base URL (Variables must start with `VITE_`):
+
+```env
+VITE_API_BASE_URL=api_url
 ```
 
 ## Running the Application
