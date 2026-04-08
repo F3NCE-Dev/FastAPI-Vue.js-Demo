@@ -39,6 +39,10 @@ onUnmounted(() => {
           {{ text }}
         </p>
       </div>
+
+      <router-link to="/" class="inline-block mt-6 text-gray-500 hover:text-gray-300 transition">
+        ← Back to Home
+      </router-link>
     </div>
   </div>
 </template>
