@@ -113,6 +113,8 @@ npm run dev
 
 - **FastAPI**
 - **Pydantic**
+- **SQLAlchemy**
+- **aiosqlite**
 - **Uvicorn**
 
 ### Frontend
