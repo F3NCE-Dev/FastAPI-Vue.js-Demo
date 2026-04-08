@@ -1,7 +1,8 @@
 from pydantic import BaseModel
 
 class StatusResponse(BaseModel):
-    status: str
+    success: bool
+    detail: str
 
 class TextResponse(BaseModel):
     text: str
