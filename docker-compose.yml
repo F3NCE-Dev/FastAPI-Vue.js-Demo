@@ -18,6 +18,11 @@ services:
   backend:
     build:
       context: ./backend
+    environment:
+      DATABASE_URL: postgresql+asyncpg://user:password@pg:5432/shop
+    depends_on:
+      pg:
+        condition: service_healthy
     networks:
       - dev
 
@@ -26,3 +31,24 @@ services:
       context: ./frontend
     networks:
       - dev
+
+  pg:
+    image: postgres:alpine
+    environment:
+        POSTGRES_USER: user
+        POSTGRES_PASSWORD: password
+        POSTGRES_DB: shop
+    #ports:
+    #  - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    networks:
+      - dev
+
+volumes:
+  pg_data:
