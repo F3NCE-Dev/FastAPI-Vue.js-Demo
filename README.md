@@ -114,6 +114,7 @@ npm run dev
 - **FastAPI**
 - **Pydantic**
 - **SQLAlchemy**
+- **alembic**
 - **aiosqlite**
 - **Uvicorn**
 
