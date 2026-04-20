@@ -20,6 +20,8 @@ services:
       context: ./backend
     environment:
       DATABASE_URL: postgresql+asyncpg://user:password@pg:5432/shop
+    ports:
+      - "8000:8000"
     depends_on:
       pg:
         condition: service_healthy
@@ -29,6 +31,8 @@ services:
   frontend:
     build:
       context: ./frontend
+    environment:
+      VITE_API_BASE_URL: /api
     networks:
       - dev
 
@@ -43,7 +47,7 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready"]
+      test: [ "CMD-SHELL", "pg_isready -U user -d app" ]
       interval: 5s
       timeout: 3s
       retries: 3
