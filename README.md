@@ -115,6 +115,7 @@ npm run dev
 - **Pydantic**
 - **SQLAlchemy**
 - **alembic**
+- **asyncpg**
 - **aiosqlite**
 - **Uvicorn**
 
